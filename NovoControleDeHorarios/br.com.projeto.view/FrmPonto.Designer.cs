@@ -96,6 +96,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_SenhaPonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_SenhaPonto.UseSystemPasswordChar = true;
             this.txt_SenhaPonto.TextChanged += new System.EventHandler(this.txt_Senha_TextChanged);
+            this.txt_SenhaPonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SenhaPonto_KeyPress);
             // 
             // label2
             // 

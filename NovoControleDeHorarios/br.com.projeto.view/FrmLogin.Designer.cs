@@ -27,10 +27,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.button1 = new System.Windows.Forms.Button();
             this.txt_SenhaLogin = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_CpfLogin = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_CpfLogin = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.button1.Location = new System.Drawing.Point(59, 157);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 43);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -52,9 +52,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_SenhaLogin.MaxLength = 4;
             this.txt_SenhaLogin.Name = "txt_SenhaLogin";
             this.txt_SenhaLogin.Size = new System.Drawing.Size(101, 29);
-            this.txt_SenhaLogin.TabIndex = 1;
+            this.txt_SenhaLogin.TabIndex = 2;
             this.txt_SenhaLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_SenhaLogin.UseSystemPasswordChar = true;
+            this.txt_SenhaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SenhaLogin_KeyPress);
             // 
             // groupBox1
             // 
@@ -72,6 +73,28 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acesso ao Sistema";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txt_CpfLogin
+            // 
+            this.txt_CpfLogin.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CpfLogin.Location = new System.Drawing.Point(61, 55);
+            this.txt_CpfLogin.MaxLength = 11;
+            this.txt_CpfLogin.Name = "txt_CpfLogin";
+            this.txt_CpfLogin.Size = new System.Drawing.Size(166, 29);
+            this.txt_CpfLogin.TabIndex = 1;
+            this.txt_CpfLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_CpfLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CpfLogin_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(120, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "CPF:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -92,27 +115,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 102);
             this.panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CPF:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txt_CpfLogin
-            // 
-            this.txt_CpfLogin.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CpfLogin.Location = new System.Drawing.Point(61, 55);
-            this.txt_CpfLogin.MaxLength = 11;
-            this.txt_CpfLogin.Name = "txt_CpfLogin";
-            this.txt_CpfLogin.Size = new System.Drawing.Size(166, 29);
-            this.txt_CpfLogin.TabIndex = 3;
-            this.txt_CpfLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmLogin
             // 

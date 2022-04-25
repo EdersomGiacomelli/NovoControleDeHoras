@@ -96,21 +96,21 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // menu_Registro
             // 
             this.menu_Registro.Name = "menu_Registro";
-            this.menu_Registro.Size = new System.Drawing.Size(180, 22);
+            this.menu_Registro.Size = new System.Drawing.Size(141, 22);
             this.menu_Registro.Text = "Registro";
             this.menu_Registro.Click += new System.EventHandler(this.menu_Registro_Click);
             // 
             // menu_RelatorioUser
             // 
             this.menu_RelatorioUser.Name = "menu_RelatorioUser";
-            this.menu_RelatorioUser.Size = new System.Drawing.Size(180, 22);
+            this.menu_RelatorioUser.Size = new System.Drawing.Size(141, 22);
             this.menu_RelatorioUser.Text = "Relatório";
             this.menu_RelatorioUser.Click += new System.EventHandler(this.menu_RelatorioUser_Click);
             // 
             // menu_Senha
             // 
             this.menu_Senha.Name = "menu_Senha";
-            this.menu_Senha.Size = new System.Drawing.Size(180, 22);
+            this.menu_Senha.Size = new System.Drawing.Size(141, 22);
             this.menu_Senha.Text = "Trocar Senha";
             // 
             // menu_Config
@@ -144,6 +144,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_Registro.TabIndex = 1;
             this.btn_Registro.Text = "REGISTRAR PONTO";
             this.btn_Registro.UseVisualStyleBackColor = true;
+            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click);
             // 
             // btn_Troca
             // 

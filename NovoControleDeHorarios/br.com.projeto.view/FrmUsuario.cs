@@ -97,5 +97,18 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private void grid_Usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
+
+        private void txt_Senha_TextChanged(object sender, EventArgs e) {
+            
+        }
+
+        private void txt_Senha_KeyPress(object sender, KeyPressEventArgs e) {
+            //permite apenas números
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) {
+
+                e.Handled = true;
+
+            }
+        }
     }
 }

@@ -28,5 +28,23 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 Login.Show();
             }
         }
+
+        private void txt_SenhaLogin_KeyPress(object sender, KeyPressEventArgs e) {
+            //permite apenas números
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void txt_CpfLogin_KeyPress(object sender, KeyPressEventArgs e) {
+            //permite apenas números
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) {
+
+                e.Handled = true;
+
+            }
+        }
     }
 }

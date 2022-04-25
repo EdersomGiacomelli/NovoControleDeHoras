@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using NovoControleDeHorarios.br.com.projeto.conexao;
 using NovoControleDeHorarios.br.com.projeto.model;
+using NovoControleDeHorarios.br.com.projeto.view;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,25 +22,9 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
 
         #region Select dados da tb_usuarios
-        public DataTable ListarDados(Horarios obj) {
-            //define comando sql
-            string consulta = @"select nome, cpf from tb_usuarios where senha=@senha";
-            //organização do comando e parametros
-            MySqlCommand executaCmd = new MySqlCommand(consulta, conexao);
-            executaCmd.Parameters.AddWithValue("@senha", obj.senha);
-
-            //abre a conexao e executa o comando
-            conexao.Open();
-            executaCmd.ExecuteNonQuery();
-            DataTable tabelaHoras = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
-
-            da.Fill(tabelaHoras);
-            //fecha a conexão
-            conexao.Close();
-
-            return tabelaHoras;
-
+        public void ListarDados(Horarios obj) {
+            // inserido diretamente no form
+            //verificar posteriormente
         }
 
         #endregion
