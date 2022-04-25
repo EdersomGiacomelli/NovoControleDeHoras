@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NovoControleDeHorarios.br.com.projeto.dao {
     class HorariosDao {
@@ -31,22 +32,24 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
         #region Alterar a tabela de horários
         public void NovoPonto(Horarios obj) {
-            /*
-             * try {
+            try {
 
                 //definir o comando a ser executado SQL
-                string sqlupdate = @"insert into tb_horarios (nome, cpf, permissao, senha) 
-                                   values (@nome, @cpf, @permissao, @senha)";
+                string sqlinsert = @"insert into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
+                                    Entrada, Saida, Senha_Reg, Fk_Id) Values (@Cpf_Reg,
+                                    @Nome_Reg, @Data_Reg, @Entrada, @Saida, @Senha_Reg, @Fk_Id);";
                 //organização do comando SQL
-                //recebe parâmetros para o update
-                MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
-                executaCmd.Parameters.AddWithValue("@nome", obj.nome);
-                executaCmd.Parameters.AddWithValue("@cpf", obj.cpf);
-                executaCmd.Parameters.AddWithValue("@permissao", obj.permissao);
-                executaCmd.Parameters.AddWithValue("@senha", obj.senha);
-                executaCmd.Parameters.AddWithValue("@id", obj.id);
+                //recebe parâmetros para o insert
+                MySqlCommand executaCmd = new MySqlCommand(sqlinsert, conexao);
+                executaCmd.Parameters.AddWithValue("@Cpf_Reg", obj.cpf);
+                executaCmd.Parameters.AddWithValue("@Nome_Reg", obj.nome);
+                executaCmd.Parameters.AddWithValue("@Data_Reg", obj.data);
+                executaCmd.Parameters.AddWithValue("@Entrada", obj.entrada);
+                executaCmd.Parameters.AddWithValue("@Saida", obj.saida);
+                executaCmd.Parameters.AddWithValue("@Senha_Reg", obj.senha);
+                executaCmd.Parameters.AddWithValue("@Fk_Id", obj.Fk_id);
 
-                //abre a conexão e executa o SQL
+                //abre a conexão, executa o SQL
                 conexao.Open();
                 executaCmd.ExecuteNonQuery();
 
@@ -54,13 +57,11 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
                 conexao.Close();
 
                 //mostra a mensagem
-                MessageBox.Show("Usuário Alterado!");
+                MessageBox.Show("Horário registrado!");
             } catch (Exception erro) {
 
-                MessageBox.Show("Erro ao Alterar! -- Erro: " + erro); ;
+                MessageBox.Show("Erro ao cadastrar! -- Erro: " + erro); ;
             }
-            
-            */
         }
            
 

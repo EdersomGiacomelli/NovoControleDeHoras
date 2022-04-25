@@ -36,6 +36,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txt_Id = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_EntraSai
@@ -84,6 +85,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_Salvar.TabIndex = 12;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // txt_SenhaPonto
             // 
@@ -152,11 +154,21 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.label3.TabIndex = 20;
             this.label3.Text = "E/S";
             // 
+            // txt_Id
+            // 
+            this.txt_Id.Location = new System.Drawing.Point(71, 285);
+            this.txt_Id.Name = "txt_Id";
+            this.txt_Id.ReadOnly = true;
+            this.txt_Id.Size = new System.Drawing.Size(166, 20);
+            this.txt_Id.TabIndex = 21;
+            this.txt_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmPonto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 295);
+            this.ClientSize = new System.Drawing.Size(317, 313);
+            this.Controls.Add(this.txt_Id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_Cpf);
             this.Controls.Add(this.txt_Nome);
@@ -188,5 +200,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private System.Windows.Forms.TextBox txt_Nome;
         private System.Windows.Forms.TextBox txt_Cpf;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_Id;
     }
 }

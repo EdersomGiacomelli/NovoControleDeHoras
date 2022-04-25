@@ -13,6 +13,7 @@ namespace NovoControleDeHorarios.br.com.projeto.model {
         public string entrada { get; set; }
         public string saida { get; set; }
         public int senha { get; set; }
+        public int Fk_id { get; set; }
 
     }
 }
