@@ -36,5 +36,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             FrmPonto Ponto = new FrmPonto();
             Ponto.Show();
         }
+
+        private void menu_RelatorioAdmin_Click(object sender, EventArgs e) {
+            FrmRelatorio Relatorio = new FrmRelatorio();
+            Relatorio.Show();
+        }
     }
 }

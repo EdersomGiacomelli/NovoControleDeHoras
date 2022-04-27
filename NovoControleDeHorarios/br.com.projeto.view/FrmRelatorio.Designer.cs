@@ -40,7 +40,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_GerarRelatorio
             // 
             this.btn_GerarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_GerarRelatorio.Location = new System.Drawing.Point(323, 490);
+            this.btn_GerarRelatorio.Location = new System.Drawing.Point(243, 539);
             this.btn_GerarRelatorio.Name = "btn_GerarRelatorio";
             this.btn_GerarRelatorio.Size = new System.Drawing.Size(156, 33);
             this.btn_GerarRelatorio.TabIndex = 20;
@@ -51,7 +51,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(574, 95);
+            this.label4.Location = new System.Drawing.Point(487, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 18);
             this.label4.TabIndex = 19;
@@ -61,7 +61,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label3.Location = new System.Drawing.Point(419, 93);
+            this.label3.Location = new System.Drawing.Point(332, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 18);
             this.label3.TabIndex = 18;
@@ -70,7 +70,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // txt_DataFim
             // 
             this.txt_DataFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_DataFim.Location = new System.Drawing.Point(615, 89);
+            this.txt_DataFim.Location = new System.Drawing.Point(528, 87);
             this.txt_DataFim.Mask = "00/00/0000";
             this.txt_DataFim.Name = "txt_DataFim";
             this.txt_DataFim.Size = new System.Drawing.Size(91, 24);
@@ -81,7 +81,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // txt_DataInicial
             // 
             this.txt_DataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txt_DataInicial.Location = new System.Drawing.Point(460, 87);
+            this.txt_DataInicial.Location = new System.Drawing.Point(373, 85);
             this.txt_DataInicial.Mask = "00/00/0000";
             this.txt_DataInicial.Name = "txt_DataInicial";
             this.txt_DataInicial.Size = new System.Drawing.Size(91, 24);
@@ -93,7 +93,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(502, 60);
+            this.label2.Location = new System.Drawing.Point(415, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 18);
             this.label2.TabIndex = 17;
@@ -103,7 +103,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(148, 60);
+            this.label1.Location = new System.Drawing.Point(34, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 18);
             this.label1.TabIndex = 16;
@@ -112,36 +112,37 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_MostrarInfo
             // 
             this.btn_MostrarInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_MostrarInfo.Location = new System.Drawing.Point(310, 133);
+            this.btn_MostrarInfo.Location = new System.Drawing.Point(243, 172);
             this.btn_MostrarInfo.Name = "btn_MostrarInfo";
             this.btn_MostrarInfo.Size = new System.Drawing.Size(181, 33);
             this.btn_MostrarInfo.TabIndex = 15;
             this.btn_MostrarInfo.Text = "Mostrar Informações:";
             this.btn_MostrarInfo.UseVisualStyleBackColor = true;
+            this.btn_MostrarInfo.Click += new System.EventHandler(this.btn_MostrarInfo_Click);
             // 
             // cmb_UserRelatorio
             // 
             this.cmb_UserRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmb_UserRelatorio.FormattingEnabled = true;
-            this.cmb_UserRelatorio.Location = new System.Drawing.Point(62, 87);
+            this.cmb_UserRelatorio.Location = new System.Drawing.Point(37, 85);
             this.cmb_UserRelatorio.Name = "cmb_UserRelatorio";
-            this.cmb_UserRelatorio.Size = new System.Drawing.Size(334, 26);
+            this.cmb_UserRelatorio.Size = new System.Drawing.Size(283, 26);
             this.cmb_UserRelatorio.TabIndex = 11;
             // 
             // grid_Relatorio
             // 
             this.grid_Relatorio.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.grid_Relatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Relatorio.Location = new System.Drawing.Point(12, 172);
+            this.grid_Relatorio.Location = new System.Drawing.Point(12, 221);
             this.grid_Relatorio.Name = "grid_Relatorio";
-            this.grid_Relatorio.Size = new System.Drawing.Size(776, 312);
+            this.grid_Relatorio.Size = new System.Drawing.Size(647, 312);
             this.grid_Relatorio.TabIndex = 12;
             // 
             // FrmRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 584);
+            this.ClientSize = new System.Drawing.Size(670, 584);
             this.Controls.Add(this.btn_GerarRelatorio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -154,6 +155,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.grid_Relatorio);
             this.Name = "FrmRelatorio";
             this.Text = "FrmRelatorio";
+            this.Load += new System.EventHandler(this.FrmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_Relatorio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

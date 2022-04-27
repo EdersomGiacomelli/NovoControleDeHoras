@@ -37,6 +37,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Id = new System.Windows.Forms.TextBox();
+            this.txt_registro = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_EntraSai
@@ -163,11 +164,21 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_Id.TabIndex = 21;
             this.txt_Id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txt_registro
+            // 
+            this.txt_registro.Location = new System.Drawing.Point(71, 311);
+            this.txt_registro.Name = "txt_registro";
+            this.txt_registro.ReadOnly = true;
+            this.txt_registro.Size = new System.Drawing.Size(166, 20);
+            this.txt_registro.TabIndex = 22;
+            this.txt_registro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmPonto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 313);
+            this.ClientSize = new System.Drawing.Size(317, 334);
+            this.Controls.Add(this.txt_registro);
             this.Controls.Add(this.txt_Id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_Cpf);
@@ -201,5 +212,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private System.Windows.Forms.TextBox txt_Cpf;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Id;
+        private System.Windows.Forms.TextBox txt_registro;
     }
 }

@@ -29,6 +29,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private void txt_EntraSai_TextChanged(object sender, EventArgs e) {
             if (((TextBox)sender).Text.Length == 1) {
                 SendKeys.Send("{TAB}");
+               
             }
         }
 
@@ -38,6 +39,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 try {
                     //define comando sql
                     string consulta = @"select nome, cpf, id from tb_usuarios where senha=@senha";
+
                     //organização do comando e parametros
                     MySqlCommand executaCmd = new MySqlCommand(consulta, conexao);
                     executaCmd.Parameters.AddWithValue("@senha", txt_SenhaPonto.Text);
@@ -58,6 +60,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
 
                     //fecha a conexão
                     conexao.Close();
+
+                    //if(txt_EntraSai.Text == "s" || txt_EntraSai.Text == "S") {
+                        
+                    //}
                 } catch (Exception erro) {
 
                     MessageBox.Show("Erro ao buscar: " + erro);
@@ -108,7 +114,50 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 dao.NovoPonto(obj);
 
             } else if (txt_EntraSai.Text == "s" || txt_EntraSai.Text == "S") {
+
+                try {
+                    //define comando sql
+                    string consulta = @"select Id_Reg from tb_horarios where Data_Reg =@Data_Reg and Senha_Reg =@Senha_Reg;";
+                    //organização do comando e parametros
+                    MySqlCommand executaCmd = new MySqlCommand(consulta, conexao);
+                    executaCmd.Parameters.AddWithValue("@Data_Reg", txt_Data.Text);
+                    executaCmd.Parameters.AddWithValue("@Senha_Reg", int.Parse(txt_SenhaPonto.Text));
+
+                    //abre a conexao e executa o comando
+                    conexao.Open();
+                    executaCmd.ExecuteNonQuery();
+
+                    //recebe o conteúdo do select do banco
+                    MySqlDataReader dr;
+                    dr = executaCmd.ExecuteReader();
+                    dr.Read();
+
+                    txt_registro.Text = dr.GetString(0);
+
+                    //fecha a conexão
+                    conexao.Close();
+                } catch (Exception erro) {
+
+                    MessageBox.Show("Erro:" + erro);
+                }
+
                 // realiza um update na tabela de horários, alterando apenas o horário de saída
+                Horarios objt = new Horarios();
+                objt.id = int.Parse(txt_registro.Text);
+                objt.cpf = txt_Cpf.Text;
+                objt.nome = txt_Nome.Text;
+                objt.data = txt_Data.Text;
+                objt.entrada = txt_Horario.Text;
+                objt.saida = txt_Horario.Text;
+                objt.senha = int.Parse(txt_SenhaPonto.Text);
+                objt.Fk_id = int.Parse(txt_Id.Text);
+
+                //Envia para o Banco de dados (cria objeto classe UsuariosDao)
+
+                HorariosDao dao = new HorariosDao();
+                dao.NovaSaida(objt);
+
+               
 
             } else {
                 MessageBox.Show("Digite apenas E para entrada ou S para saída!");

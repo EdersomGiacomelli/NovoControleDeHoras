@@ -69,6 +69,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_RelatorioAdmin.Name = "menu_RelatorioAdmin";
             this.menu_RelatorioAdmin.Size = new System.Drawing.Size(184, 22);
             this.menu_RelatorioAdmin.Text = "Relatório";
+            this.menu_RelatorioAdmin.Click += new System.EventHandler(this.menu_RelatorioAdmin_Click);
             // 
             // menu_ControleUser
             // 
