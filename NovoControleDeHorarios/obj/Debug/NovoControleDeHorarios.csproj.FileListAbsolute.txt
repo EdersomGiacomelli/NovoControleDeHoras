@@ -35,3 +35,5 @@ C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\De
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmMenu.resources
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmPonto.resources
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmRelatorio.resources
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmRelatorioUser.resources
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmAcertoManual.resources

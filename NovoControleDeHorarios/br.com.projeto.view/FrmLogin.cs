@@ -1,15 +1,17 @@
-﻿using System;
+﻿using NovoControleDeHorarios.br.com.projeto.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace NovoControleDeHorarios.br.com.projeto.view {
     public partial class FrmLogin : Form {
+        
         public FrmLogin() {
             InitializeComponent();
         }
@@ -23,11 +25,20 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            if (int.Parse(txt_SenhaLogin.Text) == 1234) {
-                FrmMenu Login = new FrmMenu();
-                Login.Show();
-            }
+            string cpf, senha;
+
+            cpf = txt_CpfLogin.Text;
+            senha = txt_SenhaLogin.Text;
+
+            UsuariosDao dao = new UsuariosDao();
+            dao.EfetuarLogin(cpf, senha);
+
+            //fecha tela de login
+            this.Hide();
+            
         }
+
+        
 
         private void txt_SenhaLogin_KeyPress(object sender, KeyPressEventArgs e) {
             //permite apenas números

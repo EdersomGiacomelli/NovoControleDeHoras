@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using NovoControleDeHorarios.br.com.projeto.conexao;
 using System.Windows.Forms;
 using System.Data;
+using NovoControleDeHorarios.br.com.projeto.view;
 
 namespace NovoControleDeHorarios.br.com.projeto.dao {
     public class UsuariosDao {
@@ -19,6 +20,73 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
             this.conexao = new ConnectionFactory().GetConnection();
         }
+
+        #region Metodo que efetua login
+        public void EfetuarLogin(string cpf, string senha) {
+            try {
+                //criação do comando sql
+                string sql = @"select * from tb_usuarios where cpf=@cpf and senha=@senha";
+
+                //organizaçao do sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@cpf", cpf);
+                executacmd.Parameters.AddWithValue("@senha", senha);
+
+                //abre a conexao e executa o comando
+                conexao.Open();
+                MySqlDataReader dadoslogin = executacmd.ExecuteReader();
+
+                if (dadoslogin.Read()) {
+                    //seleciona o nivel de acesso do usuario, atraves do dataadpater
+                    string nivelAcesso = dadoslogin.GetString("permissao");
+
+                    //verifica se o user eh o admin
+                    if (nivelAcesso.Equals("Admin")) {
+                        //fez o login
+                        FrmMenu tela = new FrmMenu();
+                        MessageBox.Show("Administrador Logado!");
+                        tela.Show();
+
+                        //fecha a conexao
+                        conexao.Close();
+                    } else if (nivelAcesso.Equals("Usuario")) {
+                        //fez o login
+                        FrmMenu tela = new FrmMenu();
+                        MessageBox.Show("Usuario Logado!");
+
+                        //desabilita menu de admin
+                        tela.menu_Admin.Enabled = false;
+                        tela.Show();
+
+                        //fecha a conexao
+                        conexao.Close();
+                    }
+
+                    
+
+                } else {
+                    //login nao realizado (dados errados)
+                    MessageBox.Show("Dados incorretos, tente novamente!");
+
+                    //fecha a conexao
+                    conexao.Close();
+                }
+
+
+
+
+            } catch (Exception erro) {
+
+                MessageBox.Show("Erro: " + erro);
+
+                //fecha a conexao
+                conexao.Close();
+            }
+        }
+
+        #endregion
+
 
         #region Método que cadastra um Usuário
         public void CadastrarUsuario(Usuarios obj) {
@@ -147,5 +215,7 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             }
 
         #endregion
+
+        
     }
 }

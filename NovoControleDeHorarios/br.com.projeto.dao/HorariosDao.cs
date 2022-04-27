@@ -165,5 +165,38 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
         }
 
         #endregion
+
+
+        #region Alteraçao de horario entrada e saida
+        public void EntradaManual(Horarios obj) {
+            try {
+
+                //definir o comando a ser executado SQL
+                string sqlupdate = @"update tb_horarios set Entrada=@entrada where Nome_Reg=@nome and Data_Reg=@data;";
+                //organização do comando SQL
+                //recebe parâmetros para o update
+                MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
+                executaCmd.Parameters.AddWithValue("@entrada", obj.entrada);
+                executaCmd.Parameters.AddWithValue("@nome", obj.nome);
+                executaCmd.Parameters.AddWithValue("@data", obj.data);
+                
+
+                //abre a conexão e executa o SQL
+                conexao.Open();
+                executaCmd.ExecuteNonQuery();
+
+                //fecha a conexão
+                conexao.Close();
+
+                //mostra a mensagem
+                MessageBox.Show("Horario Alterado!");
+            } catch (Exception erro) {
+
+                MessageBox.Show("Erro ao Alterar! -- Erro: " + erro); ;
+            }
+        }
+
+
+        #endregion
     }
 }

@@ -94,6 +94,12 @@
     <Compile Include="br.com.projeto.dao\UsuariosDao.cs" />
     <Compile Include="br.com.projeto.model\Horarios.cs" />
     <Compile Include="br.com.projeto.model\Usuarios.cs" />
+    <Compile Include="br.com.projeto.view\FrmAcertoManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmAcertoManual.Designer.cs">
+      <DependentUpon>FrmAcertoManual.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="br.com.projeto.view\FrmRelatorio.Designer.cs">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.view\FrmRelatorioUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmRelatorioUser.Designer.cs">
+      <DependentUpon>FrmRelatorioUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="br.com.projeto.view\FrmAcertoManual.resx">
+      <DependentUpon>FrmAcertoManual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmRelatorio.resx">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmRelatorioUser.resx">
+      <DependentUpon>FrmRelatorioUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>

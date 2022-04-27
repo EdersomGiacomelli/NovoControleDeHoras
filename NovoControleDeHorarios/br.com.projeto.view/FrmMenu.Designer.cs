@@ -24,7 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menu = new System.Windows.Forms.MenuStrip();
             this.menu_Admin = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_RelatorioAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ControleUser = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,20 +39,20 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_Registro = new System.Windows.Forms.Button();
             this.btn_Troca = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // Menu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_Admin,
             this.menu_Usuarios,
             this.menu_Config});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(265, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Menu.Location = new System.Drawing.Point(0, 0);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(265, 24);
+            this.Menu.TabIndex = 0;
+            this.Menu.Text = "menuStrip1";
             // 
             // menu_Admin
             // 
@@ -83,6 +83,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_Manual.Name = "menu_Manual";
             this.menu_Manual.Size = new System.Drawing.Size(184, 22);
             this.menu_Manual.Text = "Acerto Manual";
+            this.menu_Manual.Click += new System.EventHandler(this.menu_Manual_Click);
             // 
             // menu_Usuarios
             // 
@@ -97,21 +98,21 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // menu_Registro
             // 
             this.menu_Registro.Name = "menu_Registro";
-            this.menu_Registro.Size = new System.Drawing.Size(141, 22);
+            this.menu_Registro.Size = new System.Drawing.Size(180, 22);
             this.menu_Registro.Text = "Registro";
             this.menu_Registro.Click += new System.EventHandler(this.menu_Registro_Click);
             // 
             // menu_RelatorioUser
             // 
             this.menu_RelatorioUser.Name = "menu_RelatorioUser";
-            this.menu_RelatorioUser.Size = new System.Drawing.Size(141, 22);
+            this.menu_RelatorioUser.Size = new System.Drawing.Size(180, 22);
             this.menu_RelatorioUser.Text = "Relatório";
             this.menu_RelatorioUser.Click += new System.EventHandler(this.menu_RelatorioUser_Click);
             // 
             // menu_Senha
             // 
             this.menu_Senha.Name = "menu_Senha";
-            this.menu_Senha.Size = new System.Drawing.Size(141, 22);
+            this.menu_Senha.Size = new System.Drawing.Size(180, 22);
             this.menu_Senha.Text = "Trocar Senha";
             // 
             // menu_Config
@@ -128,6 +129,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_TrocaUser.Name = "menu_TrocaUser";
             this.menu_TrocaUser.Size = new System.Drawing.Size(190, 22);
             this.menu_TrocaUser.Text = "Trocar Usuário (Login)";
+            this.menu_TrocaUser.Click += new System.EventHandler(this.menu_TrocaUser_Click);
             // 
             // menu_Fechar
             // 
@@ -156,6 +158,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_Troca.TabIndex = 2;
             this.btn_Troca.Text = "TROCAR USUÁRIO";
             this.btn_Troca.UseVisualStyleBackColor = true;
+            this.btn_Troca.Click += new System.EventHandler(this.btn_Troca_Click);
             // 
             // panel1
             // 
@@ -175,12 +178,12 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Troca);
             this.Controls.Add(this.btn_Registro);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.Menu);
+            this.MainMenuStrip = this.Menu;
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,20 +191,20 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menu_Admin;
+        private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem menu_RelatorioAdmin;
         private System.Windows.Forms.ToolStripMenuItem menu_ControleUser;
         private System.Windows.Forms.ToolStripMenuItem menu_Manual;
-        private System.Windows.Forms.ToolStripMenuItem menu_Usuarios;
         private System.Windows.Forms.ToolStripMenuItem menu_Registro;
         private System.Windows.Forms.ToolStripMenuItem menu_RelatorioUser;
         private System.Windows.Forms.ToolStripMenuItem menu_Senha;
-        private System.Windows.Forms.ToolStripMenuItem menu_Config;
         private System.Windows.Forms.ToolStripMenuItem menu_TrocaUser;
         private System.Windows.Forms.ToolStripMenuItem menu_Fechar;
-        private System.Windows.Forms.Button btn_Registro;
-        private System.Windows.Forms.Button btn_Troca;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ToolStripMenuItem menu_Admin;
+        public System.Windows.Forms.ToolStripMenuItem menu_Usuarios;
+        public System.Windows.Forms.ToolStripMenuItem menu_Config;
+        public System.Windows.Forms.Button btn_Registro;
+        public System.Windows.Forms.Button btn_Troca;
     }
 }
