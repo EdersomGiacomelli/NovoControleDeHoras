@@ -96,7 +96,7 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             try {
 
                 //definir o comando a ser executado SQL
-                string sqlinsert = @"insert into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
+                string sqlinsert = @"insert ignore into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
                                     Entrada, Saida, Senha_Reg, Fk_Id) Values (@Cpf_Reg,
                                     @Nome_Reg, @Data_Reg, @Entrada, @Saida, @Senha_Reg, @Fk_Id);";
                 //organização do comando SQL
@@ -172,12 +172,12 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             try {
 
                 //definir o comando a ser executado SQL
-                string sqlupdate = @"update tb_horarios set Entrada=@entrada where Nome_Reg=@nome and Data_Reg=@data;";
+                string sqlupdate = @"update tb_horarios set Entrada=@entrada where Fk_Id=@id and Data_Reg=@data;";
                 //organização do comando SQL
                 //recebe parâmetros para o update
                 MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
                 executaCmd.Parameters.AddWithValue("@entrada", obj.entrada);
-                executaCmd.Parameters.AddWithValue("@nome", obj.nome);
+                executaCmd.Parameters.AddWithValue("@id", obj.Fk_id);
                 executaCmd.Parameters.AddWithValue("@data", obj.data);
                 
 
@@ -196,7 +196,33 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             }
         }
 
+        public void SaidaManual(Horarios obj) {
+            try {
 
+                //definir o comando a ser executado SQL
+                string sqlupdate = @"update tb_horarios set Saida=@saida where Fk_Id=@id and Data_Reg=@data;";
+                //organização do comando SQL
+                //recebe parâmetros para o update
+                MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
+                executaCmd.Parameters.AddWithValue("@saida", obj.saida);
+                executaCmd.Parameters.AddWithValue("@id", obj.Fk_id);
+                executaCmd.Parameters.AddWithValue("@data", obj.data);
+
+
+                //abre a conexão e executa o SQL
+                conexao.Open();
+                executaCmd.ExecuteNonQuery();
+
+                //fecha a conexão
+                conexao.Close();
+
+                //mostra a mensagem
+                MessageBox.Show("Horario Alterado!");
+            } catch (Exception erro) {
+
+                MessageBox.Show("Erro ao Alterar! -- Erro: " + erro); ;
+            }
+        }
         #endregion
     }
 }

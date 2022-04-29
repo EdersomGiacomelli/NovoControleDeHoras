@@ -30,7 +30,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void menu_RelatorioUser_Click(object sender, EventArgs e) {
-            FrmRelatorioUser rel = new FrmRelatorioUser();
+            FrmExecutaUserRel rel = new FrmExecutaUserRel();
             rel.Show();
         }
 
@@ -61,6 +61,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             FrmAcertoManual acerto = new FrmAcertoManual();
             acerto.Show();
             
+        }
+
+        private void menu_Senha_Click(object sender, EventArgs e) {
+            FrmTorcaSenha senha = new FrmTorcaSenha();
+            senha.Show();
         }
     }
 }

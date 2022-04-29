@@ -125,6 +125,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLogin";
             this.Text = "Login Usuário";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

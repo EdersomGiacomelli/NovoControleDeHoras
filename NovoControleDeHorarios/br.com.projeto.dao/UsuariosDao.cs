@@ -216,6 +216,37 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
         #endregion
 
-        
+
+        #region troca de senha do usuário
+
+        public void AlterarSenha(Usuarios obj) {
+            try {
+
+                //definir o comando a ser executado SQL
+                string sqlupdate = @"update tb_usuarios set senha=@novasenha where cpf=@cpf and senha=@senha;";
+                //organização do comando SQL
+                //recebe parâmetros para o update
+                MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
+                executaCmd.Parameters.AddWithValue("@cpf", obj.cpf);
+                executaCmd.Parameters.AddWithValue("@senha", obj.senha);
+                executaCmd.Parameters.AddWithValue("@novasenha", obj.novasenha);
+                
+                //abre a conexão e executa o SQL
+                conexao.Open();
+                executaCmd.ExecuteNonQuery();
+
+                //fecha a conexão
+                conexao.Close();
+
+                //mostra a mensagem
+                MessageBox.Show("Senha Alterada!");
+            } catch (Exception erro) {
+
+                MessageBox.Show("Erro ao Alterar! -- Erro: " + erro); ;
+            }
+        }
+
+        #endregion
+
     }
 }

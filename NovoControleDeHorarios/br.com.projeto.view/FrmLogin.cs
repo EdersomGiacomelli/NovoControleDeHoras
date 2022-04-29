@@ -1,4 +1,5 @@
-﻿using NovoControleDeHorarios.br.com.projeto.dao;
+﻿using NovoControleDeHorarios.br.com.projeto.conexao;
+using NovoControleDeHorarios.br.com.projeto.dao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 e.Handled = true;
 
             }
+        }
+
+        //carregar bd quando inicia o programa
+        private void FrmLogin_Load(object sender, EventArgs e) {
+            Mysql.conectar();
         }
     }
 }

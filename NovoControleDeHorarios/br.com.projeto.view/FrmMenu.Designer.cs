@@ -38,7 +38,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_Fechar = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Registro = new System.Windows.Forms.Button();
             this.btn_Troca = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,22 +97,23 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // menu_Registro
             // 
             this.menu_Registro.Name = "menu_Registro";
-            this.menu_Registro.Size = new System.Drawing.Size(180, 22);
+            this.menu_Registro.Size = new System.Drawing.Size(141, 22);
             this.menu_Registro.Text = "Registro";
             this.menu_Registro.Click += new System.EventHandler(this.menu_Registro_Click);
             // 
             // menu_RelatorioUser
             // 
             this.menu_RelatorioUser.Name = "menu_RelatorioUser";
-            this.menu_RelatorioUser.Size = new System.Drawing.Size(180, 22);
+            this.menu_RelatorioUser.Size = new System.Drawing.Size(141, 22);
             this.menu_RelatorioUser.Text = "Relatório";
             this.menu_RelatorioUser.Click += new System.EventHandler(this.menu_RelatorioUser_Click);
             // 
             // menu_Senha
             // 
             this.menu_Senha.Name = "menu_Senha";
-            this.menu_Senha.Size = new System.Drawing.Size(180, 22);
+            this.menu_Senha.Size = new System.Drawing.Size(141, 22);
             this.menu_Senha.Text = "Trocar Senha";
+            this.menu_Senha.Click += new System.EventHandler(this.menu_Senha_Click);
             // 
             // menu_Config
             // 
@@ -160,22 +160,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_Troca.UseVisualStyleBackColor = true;
             this.btn_Troca.Click += new System.EventHandler(this.btn_Troca_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::NovoControleDeHorarios.Properties.Resources.Logo;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 161);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 61);
-            this.panel1.TabIndex = 3;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 222);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Troca);
             this.Controls.Add(this.btn_Registro);
             this.Controls.Add(this.Menu);
@@ -200,7 +189,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private System.Windows.Forms.ToolStripMenuItem menu_Senha;
         private System.Windows.Forms.ToolStripMenuItem menu_TrocaUser;
         private System.Windows.Forms.ToolStripMenuItem menu_Fechar;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.ToolStripMenuItem menu_Admin;
         public System.Windows.Forms.ToolStripMenuItem menu_Usuarios;
         public System.Windows.Forms.ToolStripMenuItem menu_Config;

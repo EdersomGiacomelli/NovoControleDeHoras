@@ -15,6 +15,8 @@ using System.Windows.Forms;
 namespace NovoControleDeHorarios.br.com.projeto.view {
     public partial class FrmRelatorio : Form {
         private MySqlConnection conexao;
+        DataTable relatorio = new DataTable();
+        DataTable tabelaFiltro = new DataTable();
         public FrmRelatorio() {
             InitializeComponent();
             this.conexao = new ConnectionFactory().GetConnection();
@@ -57,7 +59,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             executaCmd.ExecuteNonQuery();
 
             //criar o dataTable e MySqlDataAdapter (adaptador de dados do Mysql)
-            DataTable tabelaFiltro = new DataTable();
+            //DataTable tabelaFiltro = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
 
             //preenche o datatable com os dados
@@ -68,8 +70,34 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             conexao.Close();
 
             grid_Relatorio.DataSource = tabelaFiltro;
-            
+
+            //relatorio = tabelaFiltro;
 
         }
+
+        private void btn_GerarRelatorio_Click(object sender, EventArgs e) {
+            var dt = GerarRelatorio();
+            using(var frm = new FrmExecutaRelatorio(dt)) {
+                frm.ShowDialog();
+            }
+        }
+
+        private DataTable GerarRelatorio() {
+            var dt = new DataTable();
+            dt.Columns.Add("Cpf_Reg");
+            dt.Columns.Add("Data_Reg");
+            dt.Columns.Add("Entrada");
+            dt.Columns.Add("Saida");
+
+            //percorre o datagrid e preenche os dados no datatable
+            
+            foreach (DataGridViewRow item in grid_Relatorio.Rows) {
+                dt.Rows.Add(item.Cells[0].Value.ToString(),
+                item.Cells[1].Value.ToString(),
+                item.Cells[2].Value.ToString(),
+                item.Cells[3].Value.ToString());
+            }
+            return dt;
+        } 
     }
 }

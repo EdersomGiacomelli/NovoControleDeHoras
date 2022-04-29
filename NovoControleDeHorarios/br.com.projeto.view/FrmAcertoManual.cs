@@ -1,4 +1,5 @@
 ﻿using NovoControleDeHorarios.br.com.projeto.dao;
+using NovoControleDeHorarios.br.com.projeto.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,10 +29,25 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private void btn_AcertoSalvar_Click(object sender, EventArgs e) {
             if (cmb_EntradaSaida.Text == "Entrada") {
                 //update no horario de entrada
+                Horarios obj = new Horarios();
+
+                obj.entrada = txt_HoraAcerto.Text;
+                obj.Fk_id = int.Parse(cmb_UserAcerto.SelectedValue.ToString());
+                obj.data = txt_DataAcerto.Text;
+
+                HorariosDao dao = new HorariosDao();
+                dao.EntradaManual(obj);
 
             } else if (cmb_EntradaSaida.Text == "Saida") {
                 //update no horario de saida
+                Horarios obj = new Horarios();
 
+                obj.saida = txt_HoraAcerto.Text;
+                obj.Fk_id = int.Parse(cmb_UserAcerto.SelectedValue.ToString());
+                obj.data = txt_DataAcerto.Text;
+
+                HorariosDao dao = new HorariosDao();
+                dao.SaidaManual(obj);
             }
         }
     }

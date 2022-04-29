@@ -48,6 +48,24 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -89,7 +107,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd_controleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_controleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_controleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_controleDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.conexao\ConnectionFactory.cs" />
+    <Compile Include="br.com.projeto.conexao\Mysql.cs" />
     <Compile Include="br.com.projeto.dao\HorariosDao.cs" />
     <Compile Include="br.com.projeto.dao\UsuariosDao.cs" />
     <Compile Include="br.com.projeto.model\Horarios.cs" />
@@ -99,6 +128,18 @@
     </Compile>
     <Compile Include="br.com.projeto.view\FrmAcertoManual.Designer.cs">
       <DependentUpon>FrmAcertoManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmExecutaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmExecutaRelatorio.Designer.cs">
+      <DependentUpon>FrmExecutaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmExecutaUserRel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmExecutaUserRel.Designer.cs">
+      <DependentUpon>FrmExecutaUserRel.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.projeto.view\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -130,16 +171,37 @@
     <Compile Include="br.com.projeto.view\FrmRelatorioUser.Designer.cs">
       <DependentUpon>FrmRelatorioUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.view\FrmTorcaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmTorcaSenha.Designer.cs">
+      <DependentUpon>FrmTorcaSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.projeto.view\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetUser.cs">
+      <DependentUpon>DataSetUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="br.com.projeto.view\FrmAcertoManual.resx">
       <DependentUpon>FrmAcertoManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmExecutaRelatorio.resx">
+      <DependentUpon>FrmExecutaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmExecutaUserRel.resx">
+      <DependentUpon>FrmExecutaUserRel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -156,6 +218,9 @@
     <EmbeddedResource Include="br.com.projeto.view\FrmRelatorioUser.resx">
       <DependentUpon>FrmRelatorioUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmTorcaSenha.resx">
+      <DependentUpon>FrmTorcaSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +229,41 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioAdmin.rdlc" />
+    <EmbeddedResource Include="RelatorioUsuario.rdlc" />
+    <None Include="bd_controleDataSet.xsc">
+      <DependentUpon>bd_controleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_controleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_controleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_controleDataSet.xss">
+      <DependentUpon>bd_controleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_controleDataSet1.xsc">
+      <DependentUpon>bd_controleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_controleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_controleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_controleDataSet1.xss">
+      <DependentUpon>bd_controleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUser.xsc">
+      <DependentUpon>DataSetUser.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUser.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetUser.xss">
+      <DependentUpon>DataSetUser.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -191,6 +291,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circuit-board-g34fbafb2b_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

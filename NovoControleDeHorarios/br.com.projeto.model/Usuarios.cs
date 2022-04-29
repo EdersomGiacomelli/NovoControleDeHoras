@@ -12,5 +12,6 @@ namespace NovoControleDeHorarios.br.com.projeto.model {
         public string cpf { get; set; }
         public string permissao { get; set; }
         public int senha { get; set; }
+        public int novasenha { get; set; }
     }
 }

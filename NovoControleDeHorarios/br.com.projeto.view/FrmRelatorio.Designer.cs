@@ -46,6 +46,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.btn_GerarRelatorio.TabIndex = 20;
             this.btn_GerarRelatorio.Text = "Gerar Relatório";
             this.btn_GerarRelatorio.UseVisualStyleBackColor = true;
+            this.btn_GerarRelatorio.Click += new System.EventHandler(this.btn_GerarRelatorio_Click);
             // 
             // label4
             // 
