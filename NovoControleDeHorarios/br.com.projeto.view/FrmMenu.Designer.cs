@@ -170,6 +170,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.Menu);
             this.MainMenuStrip = this.Menu;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();

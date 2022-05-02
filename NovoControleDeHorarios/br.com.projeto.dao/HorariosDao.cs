@@ -172,13 +172,18 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             try {
 
                 //definir o comando a ser executado SQL
-                string sqlupdate = @"update tb_horarios set Entrada=@entrada where Fk_Id=@id and Data_Reg=@data;";
+                string sqlinsert = @"insert into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
+                                    Entrada, Saida, Senha_Reg, Fk_Id) values (@Cpf_Reg,
+                                    @Nome_Reg, @Data_Reg, @Entrada, '00:00', @Senha_Reg, @Fk_Id);";
                 //organização do comando SQL
                 //recebe parâmetros para o update
-                MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
-                executaCmd.Parameters.AddWithValue("@entrada", obj.entrada);
-                executaCmd.Parameters.AddWithValue("@id", obj.Fk_id);
-                executaCmd.Parameters.AddWithValue("@data", obj.data);
+                MySqlCommand executaCmd = new MySqlCommand(sqlinsert, conexao);
+                executaCmd.Parameters.AddWithValue("@Entrada", obj.entrada);
+                executaCmd.Parameters.AddWithValue("@Fk_Id", obj.Fk_id);
+                executaCmd.Parameters.AddWithValue("@Data_Reg", obj.data);
+                executaCmd.Parameters.AddWithValue("@Cpf_Reg", obj.cpf);
+                executaCmd.Parameters.AddWithValue("@Senha_Reg", obj.senha);
+                executaCmd.Parameters.AddWithValue("@Nome_Reg", obj.nome);
                 
 
                 //abre a conexão e executa o SQL

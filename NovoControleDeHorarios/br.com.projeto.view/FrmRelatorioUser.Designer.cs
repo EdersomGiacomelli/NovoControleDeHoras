@@ -156,6 +156,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.btn_MostrarInfo);
             this.Controls.Add(this.grid_Relatorio);
             this.Name = "FrmRelatorioUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorio de Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.grid_Relatorio)).EndInit();
             this.ResumeLayout(false);

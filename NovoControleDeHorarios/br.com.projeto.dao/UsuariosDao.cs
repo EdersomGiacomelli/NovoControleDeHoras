@@ -248,5 +248,38 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
         #endregion
 
+        #region Executa a busca de dados do usuario para insert na alteração manual
+        public void inserirManual(int id) {
+            try {
+                //criação do comando sql
+                string sql = @"select cpf, nome, senha from tb_usuarios where id=@id";
+
+                //organizaçao do sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id", id);
+
+                //abre a conexao e executa o comando
+                conexao.Open();
+
+                executacmd.ExecuteNonQuery();
+
+                //recebe o conteúdo do select do banco
+                MySqlDataReader dr;
+                dr = executacmd.ExecuteReader();
+                dr.Read();
+
+                conexao.Close();
+
+            } catch (Exception erro) {
+                MessageBox.Show("Erro: " + erro);
+
+                //fecha a conexao
+                conexao.Close();
+            }
+        }
+    
+        #endregion
+
     }
 }

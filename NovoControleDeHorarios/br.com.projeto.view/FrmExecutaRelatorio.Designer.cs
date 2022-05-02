@@ -43,6 +43,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.ClientSize = new System.Drawing.Size(597, 426);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmExecutaRelatorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmExecutaRelatorio";
             this.Load += new System.EventHandler(this.FrmExecutaRelatorio_Load);
             this.ResumeLayout(false);

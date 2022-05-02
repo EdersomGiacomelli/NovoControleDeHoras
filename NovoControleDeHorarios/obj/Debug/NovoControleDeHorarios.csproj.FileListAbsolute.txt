@@ -97,6 +97,10 @@ C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\De
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmExecutaRelatorio.resources
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmExecutaUserRel.resources
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\NovoControleDeHorarios.exe.manifest
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\NovoControleDeHorarios.application
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.exe.manifest
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.application
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\RdlCompile.cache
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\RdlCompile.compiled
-C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmExecutaUserRel.resources

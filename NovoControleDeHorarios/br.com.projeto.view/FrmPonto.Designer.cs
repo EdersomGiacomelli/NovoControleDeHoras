@@ -191,6 +191,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.txt_SenhaPonto);
             this.Controls.Add(this.label2);
             this.Name = "FrmPonto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPonto";
             this.Load += new System.EventHandler(this.FrmPonto_Load);
             this.ResumeLayout(false);

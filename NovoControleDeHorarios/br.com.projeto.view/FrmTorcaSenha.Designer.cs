@@ -151,6 +151,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_TrocaSenha);
             this.Name = "FrmTorcaSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTorcaSenha";
             this.ResumeLayout(false);
             this.PerformLayout();

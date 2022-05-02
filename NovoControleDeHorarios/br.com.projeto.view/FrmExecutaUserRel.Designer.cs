@@ -120,6 +120,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.btn_Filtrar);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmExecutaUserRel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmExecutaUserRel";
             this.Load += new System.EventHandler(this.FrmExecutaUserRel_Load);
             this.ResumeLayout(false);

@@ -155,6 +155,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.cmb_UserRelatorio);
             this.Controls.Add(this.grid_Relatorio);
             this.Name = "FrmRelatorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRelatorio";
             this.Load += new System.EventHandler(this.FrmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_Relatorio)).EndInit();

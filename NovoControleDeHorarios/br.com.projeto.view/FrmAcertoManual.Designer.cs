@@ -33,6 +33,9 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.cmb_UserAcerto = new System.Windows.Forms.ComboBox();
             this.txt_DataAcerto = new System.Windows.Forms.MaskedTextBox();
             this.txt_HoraAcerto = new System.Windows.Forms.MaskedTextBox();
+            this.lb_cpf = new System.Windows.Forms.Label();
+            this.lb_Nome = new System.Windows.Forms.Label();
+            this.lb_Senha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -107,6 +110,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.cmb_UserAcerto.Name = "cmb_UserAcerto";
             this.cmb_UserAcerto.Size = new System.Drawing.Size(121, 26);
             this.cmb_UserAcerto.TabIndex = 12;
+            this.cmb_UserAcerto.SelectedIndexChanged += new System.EventHandler(this.cmb_UserAcerto_SelectedIndexChanged);
             // 
             // txt_DataAcerto
             // 
@@ -130,11 +134,41 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.txt_HoraAcerto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_HoraAcerto.ValidatingType = typeof(System.DateTime);
             // 
+            // lb_cpf
+            // 
+            this.lb_cpf.AutoSize = true;
+            this.lb_cpf.Location = new System.Drawing.Point(1, 380);
+            this.lb_cpf.Name = "lb_cpf";
+            this.lb_cpf.Size = new System.Drawing.Size(11, 13);
+            this.lb_cpf.TabIndex = 19;
+            this.lb_cpf.Text = "*";
+            // 
+            // lb_Nome
+            // 
+            this.lb_Nome.AutoSize = true;
+            this.lb_Nome.Location = new System.Drawing.Point(1, 393);
+            this.lb_Nome.Name = "lb_Nome";
+            this.lb_Nome.Size = new System.Drawing.Size(11, 13);
+            this.lb_Nome.TabIndex = 20;
+            this.lb_Nome.Text = "*";
+            // 
+            // lb_Senha
+            // 
+            this.lb_Senha.AutoSize = true;
+            this.lb_Senha.Location = new System.Drawing.Point(1, 406);
+            this.lb_Senha.Name = "lb_Senha";
+            this.lb_Senha.Size = new System.Drawing.Size(11, 13);
+            this.lb_Senha.TabIndex = 21;
+            this.lb_Senha.Text = "*";
+            // 
             // FrmAcertoManual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 304);
+            this.ClientSize = new System.Drawing.Size(256, 283);
+            this.Controls.Add(this.lb_Senha);
+            this.Controls.Add(this.lb_Nome);
+            this.Controls.Add(this.lb_cpf);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmb_EntradaSaida);
             this.Controls.Add(this.label3);
@@ -145,6 +179,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.txt_DataAcerto);
             this.Controls.Add(this.txt_HoraAcerto);
             this.Name = "FrmAcertoManual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAcertoManual";
             this.Load += new System.EventHandler(this.FrmAcertoManual_Load);
             this.ResumeLayout(false);
@@ -163,5 +198,8 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private System.Windows.Forms.ComboBox cmb_UserAcerto;
         private System.Windows.Forms.MaskedTextBox txt_DataAcerto;
         private System.Windows.Forms.MaskedTextBox txt_HoraAcerto;
+        private System.Windows.Forms.Label lb_cpf;
+        private System.Windows.Forms.Label lb_Nome;
+        private System.Windows.Forms.Label lb_Senha;
     }
 }
