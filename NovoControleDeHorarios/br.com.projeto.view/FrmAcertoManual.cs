@@ -40,7 +40,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 //puxa os dados do usuário para insert de novo horário de entrada manual
                 try {
                     //define comando sql
-                    string consulta = @"select nome, cpf, id from tb_usuarios where nome=@nome";
+                    string consulta = @"select nome, cpf, senha from tb_usuarios where nome=@nome";
 
                     //organização do comando e parametros
                     MySqlCommand executaCmd = new MySqlCommand(consulta, conexao);

@@ -224,6 +224,7 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
                 //definir o comando a ser executado SQL
                 string sqlupdate = @"update tb_usuarios set senha=@novasenha where cpf=@cpf and senha=@senha;";
+                string sqlupdatehora = @"update tb_horarios set Senha_Reg=@novasenha where Cpf_Reg=@cpf and Senha_Reg=@senha;";
                 //organização do comando SQL
                 //recebe parâmetros para o update
                 MySqlCommand executaCmd = new MySqlCommand(sqlupdate, conexao);
@@ -231,6 +232,19 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
                 executaCmd.Parameters.AddWithValue("@senha", obj.senha);
                 executaCmd.Parameters.AddWithValue("@novasenha", obj.novasenha);
                 
+                //abre a conexão e executa o SQL
+                conexao.Open();
+                executaCmd.ExecuteNonQuery();
+
+                //fecha a conexão
+                conexao.Close();
+
+                //recebe parâmetros para o update
+                executaCmd = new MySqlCommand(sqlupdatehora, conexao);
+                executaCmd.Parameters.AddWithValue("@cpf", obj.cpf);
+                executaCmd.Parameters.AddWithValue("@senha", obj.senha);
+                executaCmd.Parameters.AddWithValue("@novasenha", obj.novasenha);
+
                 //abre a conexão e executa o SQL
                 conexao.Open();
                 executaCmd.ExecuteNonQuery();
