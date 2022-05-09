@@ -162,6 +162,13 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             } else {
                 MessageBox.Show("Digite apenas E para entrada ou S para saída!");
             }
+            txt_EntraSai.Text = string.Empty;
+            txt_SenhaPonto.Text = string.Empty;
+            txt_Id.Text = string.Empty;
+            txt_Nome.Text = string.Empty;
+            txt_Cpf.Text = string.Empty;
+            txt_registro.Text = string.Empty;
+            txt_EntraSai.Focus();
         }
     }
 }

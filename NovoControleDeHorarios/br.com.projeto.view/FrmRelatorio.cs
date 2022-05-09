@@ -45,8 +45,16 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             datafim = txt_DataFim.Text;
 
             //criar a string do comando sql
-            string sqlList = @"select Cpf_Reg, Nome_Reg, Data_Reg, Entrada, Saida
+            
+            string sqlList = @"select a.Cpf_Reg, a.Nome_Reg, a.Data_Reg, a.Entrada, a.Saida, b.semanal
+                            from tb_datas as b
+                            inner join tb_horarios as a
+                            on b.dia = a.Data_Reg
+                            WHERE Nome_Reg=@id and Data_Reg between @datainicio and @datafim;" ;
+
+            /*string sqlList = @"select Cpf_Reg, Nome_Reg, Data_Reg, Entrada, Saida
                             from tb_horarios WHERE Nome_Reg=@id and Data_Reg between @datainicio and @datafim;";
+            */
 
             //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
             MySqlCommand executaCmd = new MySqlCommand(sqlList, conexao);

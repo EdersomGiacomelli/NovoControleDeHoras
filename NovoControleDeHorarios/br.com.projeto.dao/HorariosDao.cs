@@ -63,7 +63,10 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
         public DataTable ListarHorarios() {
 
             //criar a string do comando sql
-            string sqlList = @"select Cpf_Reg, Nome_Reg, Data_Reg, Entrada, Saida from tb_horarios";
+            string sqlList = @"select a.Cpf_Reg, a.Nome_Reg, a.Data_Reg, a.Entrada, a.Saida, b.semanal
+                            from tb_datas as b
+                            inner join tb_horarios as a
+                            on b.dia = a.Data_Reg;";
 
             //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
             MySqlCommand executaCmd = new MySqlCommand(sqlList, conexao);
@@ -96,9 +99,13 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             try {
 
                 //definir o comando a ser executado SQL
-                string sqlinsert = @"insert ignore into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
-                                    Entrada, Saida, Senha_Reg, Fk_Id) Values (@Cpf_Reg,
-                                    @Nome_Reg, @Data_Reg, @Entrada, @Saida, @Senha_Reg, @Fk_Id);";
+                string sqlinsert = @"insert into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg, Entrada, Saida, Senha_Reg, Fk_Id)
+                                    SELECT @Cpf_Reg, @Nome_Reg, @Data_Reg, @Entrada, @Saida, @Senha_Reg, @Fk_Id 
+                                    FROM dual
+                                    WHERE NOT EXISTS (SELECT * FROM tb_horarios
+                                    WHERE Senha_Reg = @Senha_Reg 
+                                    AND Data_Reg = @Data_Reg);";
+
                 //organização do comando SQL
                 //recebe parâmetros para o insert
                 MySqlCommand executaCmd = new MySqlCommand(sqlinsert, conexao);
@@ -172,7 +179,7 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
             try {
 
                 //definir o comando a ser executado SQL
-                string sqlinsert = @"insert into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
+                string sqlinsert = @"insert ignore into tb_horarios (Cpf_Reg, Nome_Reg, Data_Reg,
                                     Entrada, Saida, Senha_Reg, Fk_Id) values (@Cpf_Reg,
                                     @Nome_Reg, @Data_Reg, @Entrada, '00:00', @Senha_Reg, @Fk_Id);";
                 //organização do comando SQL
