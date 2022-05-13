@@ -64,9 +64,9 @@ namespace NovoControleDeHorarios.br.com.projeto.dao {
 
             //criar a string do comando sql
             string sqlList = @"select a.Cpf_Reg, a.Nome_Reg, a.Data_Reg, a.Entrada, a.Saida, b.semanal
-                            from tb_datas as b
+                            from tb_data as b
                             inner join tb_horarios as a
-                            on b.dia = a.Data_Reg;";
+                            on b.diastring = a.Data_Reg;";
 
             //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
             MySqlCommand executaCmd = new MySqlCommand(sqlList, conexao);

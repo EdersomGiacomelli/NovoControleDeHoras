@@ -127,6 +127,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             // menu_TrocaUser
             // 
+            this.menu_TrocaUser.Enabled = false;
             this.menu_TrocaUser.Name = "menu_TrocaUser";
             this.menu_TrocaUser.Size = new System.Drawing.Size(190, 22);
             this.menu_TrocaUser.Text = "Trocar Usuário (Login)";
@@ -142,14 +143,13 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_Troca
             // 
             this.btn_Troca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Troca.Image = global::NovoControleDeHorarios.Properties.Resources.change;
+            this.btn_Troca.Image = global::NovoControleDeHorarios.Properties.Resources.relatorio__1_;
             this.btn_Troca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Troca.Location = new System.Drawing.Point(29, 105);
             this.btn_Troca.Name = "btn_Troca";
             this.btn_Troca.Size = new System.Drawing.Size(207, 48);
             this.btn_Troca.TabIndex = 2;
-            this.btn_Troca.Text = "TROCAR USUÁRIO";
-            this.btn_Troca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Troca.Text = "   RELATÓRIO";
             this.btn_Troca.UseVisualStyleBackColor = true;
             this.btn_Troca.Click += new System.EventHandler(this.btn_Troca_Click);
             // 
@@ -180,6 +180,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);

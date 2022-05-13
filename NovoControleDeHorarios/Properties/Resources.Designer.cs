@@ -123,6 +123,16 @@ namespace NovoControleDeHorarios.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap relatorio__1_ {
+            get {
+                object obj = ResourceManager.GetObject("relatorio (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap salvar__1_ {
             get {
                 object obj = ResourceManager.GetObject("salvar (1)", resourceCulture);

@@ -262,7 +262,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RelatorioAdmin.rdlc" />
-    <EmbeddedResource Include="RelatorioUsuario.rdlc" />
     <None Include="bd_controleDataSet.xsc">
       <DependentUpon>bd_controleDataSet.xsd</DependentUpon>
     </None>
@@ -337,6 +336,7 @@
     <None Include="Resources\relatorio.png" />
     <None Include="Resources\trocar.png" />
     <None Include="Resources\lixo.png" />
+    <None Include="Resources\relatorio %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

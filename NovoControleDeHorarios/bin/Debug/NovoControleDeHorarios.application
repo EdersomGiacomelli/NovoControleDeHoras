@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="NovoControleDeHorarios.exe.manifest" size="59712">
+    <dependentAssembly dependencyType="install" codebase="NovoControleDeHorarios.exe.manifest" size="59713">
       <assemblyIdentity name="NovoControleDeHorarios.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>trBoehhIwgPOYkJJeSYJmwrDam0CSgAMC/0gUkZXnNI=</dsig:DigestValue>
+        <dsig:DigestValue>VZnOWECC2nS6V4WPRZE6ZTbwWe0/SUHtsfJ5OvzSeAc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

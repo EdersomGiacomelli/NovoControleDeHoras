@@ -39,22 +39,49 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void btn_MostrarInfo_Click(object sender, EventArgs e) {
-            string datain, datafim;
+            //string datain, datafim;
             var id = cmb_UserRelatorio.Text;
-            datain = txt_DataInicial.Text;
-            datafim = txt_DataFim.Text;
+            //datain = lbData1.Text;
+            //datafim = lbData2.Text;
 
+            //teste tb_data
+            string select = @"select  a.Cpf_Reg, a.Nome_Reg, b.diastring, a.Entrada, a.Saida, b.semanal
+                            from dias as b
+                            left join tb_horarios as a
+                            on a.Nome_Reg=@id and diastring = Data_Reg;";
+
+            //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
+            MySqlCommand executaCmd = new MySqlCommand(select, conexao);
+
+            executaCmd.Parameters.AddWithValue("@id", id);
+            //executaCmd.Parameters.AddWithValue("@datainicio", datain);
+            //executaCmd.Parameters.AddWithValue("@datafim", datafim);
+            //Abre a conexão e executa o comando
+            conexao.Open();
+            executaCmd.ExecuteNonQuery();
+
+            //criar o dataTable e MySqlDataAdapter (adaptador de dados do Mysql)
+            //DataTable tabelaFiltro = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
+
+            //preenche o datatable com os dados
+
+            da.Fill(tabelaFiltro);
+
+            //fecha conexão
+            conexao.Close();
+
+            grid_Relatorio.DataSource = tabelaFiltro;
+
+            /*
             //criar a string do comando sql
-            
+
             string sqlList = @"select a.Cpf_Reg, a.Nome_Reg, a.Data_Reg, a.Entrada, a.Saida, b.semanal
                             from tb_datas as b
                             inner join tb_horarios as a
                             on b.dia = a.Data_Reg
                             WHERE Nome_Reg=@id and Data_Reg between @datainicio and @datafim;" ;
 
-            /*string sqlList = @"select Cpf_Reg, Nome_Reg, Data_Reg, Entrada, Saida
-                            from tb_horarios WHERE Nome_Reg=@id and Data_Reg between @datainicio and @datafim;";
-            */
 
             //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
             MySqlCommand executaCmd = new MySqlCommand(sqlList, conexao);
@@ -80,6 +107,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             grid_Relatorio.DataSource = tabelaFiltro;
 
             //relatorio = tabelaFiltro;
+            */
 
         }
 
@@ -108,7 +136,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 dt.Rows.Add(
                 item.Cells["Nome_Reg"].Value.ToString(),
                 item.Cells["Cpf_Reg"].Value.ToString(),
-                item.Cells["Data_Reg"].Value.ToString(),
+                item.Cells["diastring"].Value.ToString(),
                 item.Cells["Entrada"].Value.ToString(),
                 item.Cells["Saida"].Value.ToString(),
                 item.Cells["semanal"].Value.ToString());
@@ -120,6 +148,34 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
                 
             }
             return dt;
-        } 
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e) {
+            //Recebe as datas em formato padrão e modifica para date de uso do Mysql
+            string datain = txt_DataInicial.Text;
+            string[] diain = datain.Split('/');
+            string inicial = diain[2] + '-' + diain[1] + '-' + diain[0];
+            lbData1.Text = inicial;
+            string datafim = txt_DataFim.Text;
+            string[] diafim = datafim.Split('/');
+            string final = diafim[2] + '-' + diafim[1] + '-' + diafim[0];
+            lbData2.Text = final;
+
+            string view = @"create or replace view dias as select diastring, semanal from tb_data
+                            where dia between @datainicio and @datafim;";
+
+            //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
+            MySqlCommand executaCmd = new MySqlCommand(view, conexao);
+
+            executaCmd.Parameters.AddWithValue("@datainicio", inicial);
+            executaCmd.Parameters.AddWithValue("@datafim", final);
+            //Abre a conexão e executa o comando
+            conexao.Open();
+
+            executaCmd.ExecuteNonQuery();
+
+            conexao.Close();
+
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NovoControleDeHorarios.br.com.projeto.conexao;
+using NovoControleDeHorarios.br.com.projeto.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +32,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void menu_RelatorioUser_Click(object sender, EventArgs e) {
-            FrmExecutaUserRel rel = new FrmExecutaUserRel();
+            FrmRelatorioUser rel = new FrmRelatorioUser();
             rel.Show();
         }
 
@@ -45,10 +47,9 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void btn_Troca_Click(object sender, EventArgs e) {
-            FrmLogin login = new FrmLogin();
-            login.Show();
-            this.Close();
-            
+            FrmRelatorio Relatorio = new FrmRelatorio();
+            Relatorio.Show();
+
         }
 
         private void menu_TrocaUser_Click(object sender, EventArgs e) {
@@ -66,6 +67,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private void menu_Senha_Click(object sender, EventArgs e) {
             FrmTorcaSenha senha = new FrmTorcaSenha();
             senha.Show();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e) {
+            Mysql.conectar();
         }
     }
 }
