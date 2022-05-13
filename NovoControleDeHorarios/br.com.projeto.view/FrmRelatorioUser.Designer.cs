@@ -24,6 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioUser));
             this.btn_GerarRelatorio = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,11 +41,14 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_GerarRelatorio
             // 
             this.btn_GerarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_GerarRelatorio.Location = new System.Drawing.Point(205, 469);
+            this.btn_GerarRelatorio.Image = global::NovoControleDeHorarios.Properties.Resources.relatorio;
+            this.btn_GerarRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GerarRelatorio.Location = new System.Drawing.Point(211, 469);
             this.btn_GerarRelatorio.Name = "btn_GerarRelatorio";
-            this.btn_GerarRelatorio.Size = new System.Drawing.Size(156, 33);
+            this.btn_GerarRelatorio.Size = new System.Drawing.Size(146, 33);
             this.btn_GerarRelatorio.TabIndex = 4;
             this.btn_GerarRelatorio.Text = "Gerar Relatório";
+            this.btn_GerarRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_GerarRelatorio.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -112,11 +116,14 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_MostrarInfo
             // 
             this.btn_MostrarInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btn_MostrarInfo.Image = global::NovoControleDeHorarios.Properties.Resources.filtro;
+            this.btn_MostrarInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_MostrarInfo.Location = new System.Drawing.Point(189, 99);
             this.btn_MostrarInfo.Name = "btn_MostrarInfo";
             this.btn_MostrarInfo.Size = new System.Drawing.Size(181, 33);
             this.btn_MostrarInfo.TabIndex = 3;
             this.btn_MostrarInfo.Text = "Mostrar Informações:";
+            this.btn_MostrarInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_MostrarInfo.UseVisualStyleBackColor = true;
             this.btn_MostrarInfo.Click += new System.EventHandler(this.btn_MostrarInfo_Click);
             // 
@@ -155,6 +162,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_MostrarInfo);
             this.Controls.Add(this.grid_Relatorio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRelatorioUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorio de Usuario";

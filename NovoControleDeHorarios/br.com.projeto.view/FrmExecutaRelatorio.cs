@@ -20,7 +20,8 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         private void FrmExecutaRelatorio_Load(object sender, EventArgs e) {
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(new
-                Microsoft.Reporting.WinForms.ReportDataSource("DadosHorarios", dt));
+                Microsoft.Reporting.WinForms.ReportDataSource("RelatorioDados", dt));
+
             this.reportViewer1.RefreshReport();
         }
     }

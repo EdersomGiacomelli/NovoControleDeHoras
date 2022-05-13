@@ -1,7 +1,6 @@
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\NovoControleDeHorarios.exe.config
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\NovoControleDeHorarios.exe
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\NovoControleDeHorarios.pdb
-C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.csproj.AssemblyReference.cache
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.br.com.projeto.view.FrmUsuario.resources
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.Properties.Resources.resources
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.csproj.GenerateResource.cache
@@ -104,3 +103,12 @@ C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\De
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.application
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\RdlCompile.cache
 C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\RdlCompile.compiled
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sergi\source\repos\NovoControleDeHorarios\NovoControleDeHorarios\obj\Debug\NovoControleDeHorarios.csproj.AssemblyReference.cache

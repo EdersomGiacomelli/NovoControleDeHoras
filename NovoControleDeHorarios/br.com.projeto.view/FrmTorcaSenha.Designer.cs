@@ -24,6 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTorcaSenha));
             this.btn_TrocaSenha = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,11 +39,14 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_TrocaSenha
             // 
             this.btn_TrocaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_TrocaSenha.Location = new System.Drawing.Point(80, 315);
+            this.btn_TrocaSenha.Image = global::NovoControleDeHorarios.Properties.Resources.salvar__1_;
+            this.btn_TrocaSenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TrocaSenha.Location = new System.Drawing.Point(103, 301);
             this.btn_TrocaSenha.Name = "btn_TrocaSenha";
-            this.btn_TrocaSenha.Size = new System.Drawing.Size(159, 33);
+            this.btn_TrocaSenha.Size = new System.Drawing.Size(89, 33);
             this.btn_TrocaSenha.TabIndex = 4;
             this.btn_TrocaSenha.Text = "Salvar";
+            this.btn_TrocaSenha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_TrocaSenha.UseVisualStyleBackColor = true;
             this.btn_TrocaSenha.Click += new System.EventHandler(this.btn_TrocaSenha_Click);
             // 
@@ -140,7 +144,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 380);
+            this.ClientSize = new System.Drawing.Size(310, 380);
             this.Controls.Add(this.txt_Confirma);
             this.Controls.Add(this.txt_Atual);
             this.Controls.Add(this.txt_Nova);
@@ -150,9 +154,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_TrocaSenha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTorcaSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTorcaSenha";
+            this.Text = "Troca de Senha";
             this.ResumeLayout(false);
             this.PerformLayout();
 

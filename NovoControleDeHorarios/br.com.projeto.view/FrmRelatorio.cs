@@ -92,18 +92,32 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
 
         private DataTable GerarRelatorio() {
             var dt = new DataTable();
-            dt.Columns.Add("Cpf_Reg");
-            dt.Columns.Add("Data_Reg");
+            dt.Columns.Add("nome");
+            dt.Columns.Add("cpf");
+            dt.Columns.Add("data");
             dt.Columns.Add("Entrada");
             dt.Columns.Add("Saida");
+            dt.Columns.Add("semanal");
 
             //percorre o datagrid e preenche os dados no datatable
-            
-            foreach (DataGridViewRow item in grid_Relatorio.Rows) {
-                dt.Rows.Add(item.Cells[0].Value.ToString(),
-                item.Cells[1].Value.ToString(),
-                item.Cells[2].Value.ToString(),
-                item.Cells[3].Value.ToString());
+            int row = int.Parse(grid_Relatorio.Rows.Count.ToString()) - 1;
+
+            foreach(DataGridViewRow item in grid_Relatorio.Rows) {
+                
+                
+                dt.Rows.Add(
+                item.Cells["Nome_Reg"].Value.ToString(),
+                item.Cells["Cpf_Reg"].Value.ToString(),
+                item.Cells["Data_Reg"].Value.ToString(),
+                item.Cells["Entrada"].Value.ToString(),
+                item.Cells["Saida"].Value.ToString(),
+                item.Cells["semanal"].Value.ToString());
+                row--;
+                if (row == 0) {
+                    break;
+                }
+                
+                
             }
             return dt;
         } 

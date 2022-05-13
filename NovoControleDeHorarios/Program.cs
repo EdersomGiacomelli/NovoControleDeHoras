@@ -13,7 +13,7 @@ namespace NovoControleDeHorarios {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new br.com.projeto.view.FrmLogin());
+            Application.Run(new br.com.projeto.view.FrmMenu());
         }
     }
 }

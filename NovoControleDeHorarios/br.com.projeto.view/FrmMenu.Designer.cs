@@ -24,6 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.menu_Admin = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_RelatorioAdmin = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,8 +37,8 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_Config = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TrocaUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Fechar = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Registro = new System.Windows.Forms.Button();
             this.btn_Troca = new System.Windows.Forms.Button();
+            this.btn_Registro = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,27 +139,33 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.menu_Fechar.Text = "Fechar";
             this.menu_Fechar.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // btn_Registro
-            // 
-            this.btn_Registro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Registro.Location = new System.Drawing.Point(12, 38);
-            this.btn_Registro.Name = "btn_Registro";
-            this.btn_Registro.Size = new System.Drawing.Size(241, 48);
-            this.btn_Registro.TabIndex = 1;
-            this.btn_Registro.Text = "REGISTRAR PONTO";
-            this.btn_Registro.UseVisualStyleBackColor = true;
-            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click);
-            // 
             // btn_Troca
             // 
             this.btn_Troca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Troca.Location = new System.Drawing.Point(12, 107);
+            this.btn_Troca.Image = global::NovoControleDeHorarios.Properties.Resources.change;
+            this.btn_Troca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Troca.Location = new System.Drawing.Point(29, 105);
             this.btn_Troca.Name = "btn_Troca";
-            this.btn_Troca.Size = new System.Drawing.Size(241, 48);
+            this.btn_Troca.Size = new System.Drawing.Size(207, 48);
             this.btn_Troca.TabIndex = 2;
             this.btn_Troca.Text = "TROCAR USUÁRIO";
+            this.btn_Troca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Troca.UseVisualStyleBackColor = true;
             this.btn_Troca.Click += new System.EventHandler(this.btn_Troca_Click);
+            // 
+            // btn_Registro
+            // 
+            this.btn_Registro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Registro.Image = global::NovoControleDeHorarios.Properties.Resources.soco_relogio;
+            this.btn_Registro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Registro.Location = new System.Drawing.Point(29, 36);
+            this.btn_Registro.Name = "btn_Registro";
+            this.btn_Registro.Size = new System.Drawing.Size(207, 48);
+            this.btn_Registro.TabIndex = 1;
+            this.btn_Registro.Text = "REGISTRAR PONTO";
+            this.btn_Registro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Registro.UseVisualStyleBackColor = true;
+            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click);
             // 
             // FrmMenu
             // 
@@ -168,10 +175,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.btn_Troca);
             this.Controls.Add(this.btn_Registro);
             this.Controls.Add(this.Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMenu";
+            this.Text = "Menu Principal";
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);

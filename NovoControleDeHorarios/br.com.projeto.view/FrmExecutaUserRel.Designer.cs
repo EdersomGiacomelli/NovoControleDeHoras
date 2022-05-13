@@ -24,6 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExecutaUserRel));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btn_Filtrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -119,9 +120,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Filtrar);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmExecutaUserRel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmExecutaUserRel";
+            this.Text = "Relatório do Usuário";
             this.Load += new System.EventHandler(this.FrmExecutaUserRel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

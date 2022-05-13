@@ -24,29 +24,19 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btn_GerarRelatorio = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorio));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_DataFim = new System.Windows.Forms.MaskedTextBox();
             this.txt_DataInicial = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_MostrarInfo = new System.Windows.Forms.Button();
             this.cmb_UserRelatorio = new System.Windows.Forms.ComboBox();
             this.grid_Relatorio = new System.Windows.Forms.DataGridView();
+            this.btn_GerarRelatorio = new System.Windows.Forms.Button();
+            this.btn_MostrarInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Relatorio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_GerarRelatorio
-            // 
-            this.btn_GerarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_GerarRelatorio.Location = new System.Drawing.Point(243, 539);
-            this.btn_GerarRelatorio.Name = "btn_GerarRelatorio";
-            this.btn_GerarRelatorio.Size = new System.Drawing.Size(156, 33);
-            this.btn_GerarRelatorio.TabIndex = 20;
-            this.btn_GerarRelatorio.Text = "Gerar Relatório";
-            this.btn_GerarRelatorio.UseVisualStyleBackColor = true;
-            this.btn_GerarRelatorio.Click += new System.EventHandler(this.btn_GerarRelatorio_Click);
             // 
             // label4
             // 
@@ -110,17 +100,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.label1.TabIndex = 16;
             this.label1.Text = "Selecione o Usuário:";
             // 
-            // btn_MostrarInfo
-            // 
-            this.btn_MostrarInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_MostrarInfo.Location = new System.Drawing.Point(243, 172);
-            this.btn_MostrarInfo.Name = "btn_MostrarInfo";
-            this.btn_MostrarInfo.Size = new System.Drawing.Size(181, 33);
-            this.btn_MostrarInfo.TabIndex = 15;
-            this.btn_MostrarInfo.Text = "Mostrar Informações:";
-            this.btn_MostrarInfo.UseVisualStyleBackColor = true;
-            this.btn_MostrarInfo.Click += new System.EventHandler(this.btn_MostrarInfo_Click);
-            // 
             // cmb_UserRelatorio
             // 
             this.cmb_UserRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -139,6 +118,34 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.grid_Relatorio.Size = new System.Drawing.Size(647, 312);
             this.grid_Relatorio.TabIndex = 12;
             // 
+            // btn_GerarRelatorio
+            // 
+            this.btn_GerarRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btn_GerarRelatorio.Image = global::NovoControleDeHorarios.Properties.Resources.relatorio;
+            this.btn_GerarRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GerarRelatorio.Location = new System.Drawing.Point(266, 539);
+            this.btn_GerarRelatorio.Name = "btn_GerarRelatorio";
+            this.btn_GerarRelatorio.Size = new System.Drawing.Size(144, 33);
+            this.btn_GerarRelatorio.TabIndex = 20;
+            this.btn_GerarRelatorio.Text = "Gerar Relatório";
+            this.btn_GerarRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_GerarRelatorio.UseVisualStyleBackColor = true;
+            this.btn_GerarRelatorio.Click += new System.EventHandler(this.btn_GerarRelatorio_Click);
+            // 
+            // btn_MostrarInfo
+            // 
+            this.btn_MostrarInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btn_MostrarInfo.Image = global::NovoControleDeHorarios.Properties.Resources.filtro;
+            this.btn_MostrarInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_MostrarInfo.Location = new System.Drawing.Point(243, 172);
+            this.btn_MostrarInfo.Name = "btn_MostrarInfo";
+            this.btn_MostrarInfo.Size = new System.Drawing.Size(185, 33);
+            this.btn_MostrarInfo.TabIndex = 15;
+            this.btn_MostrarInfo.Text = "Mostrar Informações:";
+            this.btn_MostrarInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_MostrarInfo.UseVisualStyleBackColor = true;
+            this.btn_MostrarInfo.Click += new System.EventHandler(this.btn_MostrarInfo_Click);
+            // 
             // FrmRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,9 +161,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.btn_MostrarInfo);
             this.Controls.Add(this.cmb_UserRelatorio);
             this.Controls.Add(this.grid_Relatorio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRelatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmRelatorio";
+            this.Text = "Registros de Pontos";
             this.Load += new System.EventHandler(this.FrmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_Relatorio)).EndInit();
             this.ResumeLayout(false);

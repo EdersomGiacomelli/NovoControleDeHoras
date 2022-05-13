@@ -24,6 +24,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAcertoManual));
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_EntradaSaida = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -94,11 +95,13 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // 
             this.btn_AcertoSalvar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_AcertoSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AcertoSalvar.Location = new System.Drawing.Point(88, 244);
+            this.btn_AcertoSalvar.Image = global::NovoControleDeHorarios.Properties.Resources.salvar__1_;
+            this.btn_AcertoSalvar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_AcertoSalvar.Location = new System.Drawing.Point(80, 244);
             this.btn_AcertoSalvar.Name = "btn_AcertoSalvar";
-            this.btn_AcertoSalvar.Size = new System.Drawing.Size(78, 31);
+            this.btn_AcertoSalvar.Size = new System.Drawing.Size(98, 31);
             this.btn_AcertoSalvar.TabIndex = 14;
-            this.btn_AcertoSalvar.Text = "Salvar";
+            this.btn_AcertoSalvar.Text = "    Salvar";
             this.btn_AcertoSalvar.UseVisualStyleBackColor = false;
             this.btn_AcertoSalvar.Click += new System.EventHandler(this.btn_AcertoSalvar_Click);
             // 
@@ -178,9 +181,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.cmb_UserAcerto);
             this.Controls.Add(this.txt_DataAcerto);
             this.Controls.Add(this.txt_HoraAcerto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAcertoManual";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAcertoManual";
+            this.Text = "Acerto de Ponto Manual";
             this.Load += new System.EventHandler(this.FrmAcertoManual_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

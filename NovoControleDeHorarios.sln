@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovoControleDeHorarios", "NovoControleDeHorarios\NovoControleDeHorarios.csproj", "{06DC3AA1-0420-4067-9700-1C6733087FE2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NovoControledeHorariosSetup", "NovoControledeHorariosSetup\NovoControledeHorariosSetup.vdproj", "{D6C6C0FC-E26A-492A-9BE9-F66B85136313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{06DC3AA1-0420-4067-9700-1C6733087FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DC3AA1-0420-4067-9700-1C6733087FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06DC3AA1-0420-4067-9700-1C6733087FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C6C0FC-E26A-492A-9BE9-F66B85136313}.Debug|Any CPU.ActiveCfg = Debug
+		{D6C6C0FC-E26A-492A-9BE9-F66B85136313}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

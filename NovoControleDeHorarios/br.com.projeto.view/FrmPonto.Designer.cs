@@ -25,6 +25,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPonto));
             this.txt_EntraSai = new System.Windows.Forms.TextBox();
             this.txt_Horario = new System.Windows.Forms.MaskedTextBox();
             this.txt_Data = new System.Windows.Forms.MaskedTextBox();
@@ -80,11 +81,14 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             // btn_Salvar
             // 
             this.btn_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Salvar.Image = global::NovoControleDeHorarios.Properties.Resources.salvar__1_;
+            this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Salvar.Location = new System.Drawing.Point(116, 170);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(84, 38);
             this.btn_Salvar.TabIndex = 12;
             this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Salvar.UseVisualStyleBackColor = true;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
@@ -190,9 +194,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.txt_SenhaPonto);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPonto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPonto";
+            this.Text = "Ponto";
             this.Load += new System.EventHandler(this.FrmPonto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
