@@ -28,7 +28,7 @@ namespace NovoControleDeHorarios.br.com.projeto.conexao {
         //Cria a tabela de usuários quando inicia o programa, caso não exista ainda
         public static void conectar() {
             //cria string de conexão ao BD
-            string strCon = @"server=127.0.0.1;user id=root;Pwd=masterkey;persistsecurityinfo=True;";
+            string strCon = @"server=192.168.25.6;user id=usuario;Pwd=1234;persistsecurityinfo=True;";
 
 
             //estabelece parametros de conexão ao banco
@@ -36,7 +36,7 @@ namespace NovoControleDeHorarios.br.com.projeto.conexao {
 
             //Abre conexão com bd
             Conexao.Open();
-
+            /*
             //cria o banco com instruções SQL
             Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS bd_controle; use bd_controle", Conexao);
 
@@ -80,12 +80,12 @@ namespace NovoControleDeHorarios.br.com.projeto.conexao {
                                         "ENGINE = InnoDB; ", Conexao);
 
             Comando.ExecuteNonQuery();
-
+            */
             //autoriza alteração sem primary key
             Comando = new MySqlCommand("SET SQL_SAFE_UPDATES=0;", Conexao);
 
             Comando.ExecuteNonQuery();
-
+            /*
             #region comando insere tabela data
 
             //cria a tabela data
@@ -1594,7 +1594,7 @@ namespace NovoControleDeHorarios.br.com.projeto.conexao {
             Comando.ExecuteNonQuery();
 
             #endregion
-
+            */
             //Fecha a conexão com o banco
             Conexao.Close();
 

@@ -136,11 +136,36 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
 
                     //fecha a conexão
                     conexao.Close();
+
+                    if (txt_registro.Text.Length == 0)
+                    {
+                        MessageBox.Show("Não existe uma entrada para este usuário. Verifique!!!");
+                        txt_EntraSai.Focus();
+                    } else
+                    {
+
+                        // realiza um update na tabela de horários, alterando apenas o horário de saída
+                        Horarios objt = new Horarios();
+                        objt.id = int.Parse(txt_registro.Text);
+                        objt.cpf = txt_Cpf.Text;
+                        objt.nome = txt_Nome.Text;
+                        objt.data = txt_Data.Text;
+                        objt.entrada = txt_Horario.Text;
+                        objt.saida = txt_Horario.Text;
+                        objt.senha = int.Parse(txt_SenhaPonto.Text);
+                        objt.Fk_id = int.Parse(txt_Id.Text);
+
+                        //Envia para o Banco de dados (cria objeto classe UsuariosDao)
+
+                        HorariosDao dao = new HorariosDao();
+                        dao.NovaSaida(objt);
+
+                    }
                 } catch (Exception erro) {
 
                     MessageBox.Show("Erro:" + erro);
                 }
-
+                /*
                 // realiza um update na tabela de horários, alterando apenas o horário de saída
                 Horarios objt = new Horarios();
                 objt.id = int.Parse(txt_registro.Text);
@@ -156,7 +181,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
 
                 HorariosDao dao = new HorariosDao();
                 dao.NovaSaida(objt);
-
+                */
                
 
             } else {

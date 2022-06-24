@@ -29,7 +29,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void btn_MostrarInfo_Click(object sender, EventArgs e) {
-            
+            tabelaFiltro.Clear();
             var cpf = txt_Cpf.Text;
 
             //teste tb_data
@@ -42,14 +42,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             MySqlCommand executaCmd = new MySqlCommand(select, conexao);
 
             executaCmd.Parameters.AddWithValue("@cpf", cpf);
-            //executaCmd.Parameters.AddWithValue("@datainicio", datain);
-            //executaCmd.Parameters.AddWithValue("@datafim", datafim);
             //Abre a conexão e executa o comando
             conexao.Open();
             executaCmd.ExecuteNonQuery();
 
             //criar o dataTable e MySqlDataAdapter (adaptador de dados do Mysql)
-            //DataTable tabelaFiltro = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
 
             //preenche o datatable com os dados

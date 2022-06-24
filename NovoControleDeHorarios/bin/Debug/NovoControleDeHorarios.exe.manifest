@@ -847,14 +847,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NovoControleDeHorarios.exe" size="1013728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NovoControleDeHorarios.exe" size="754656">
       <assemblyIdentity name="NovoControleDeHorarios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xNpT5dB/yb0XAwqlPGCOsjasni2E3MgbarReOE0832s=</dsig:DigestValue>
+        <dsig:DigestValue>4HwtqN3Lpsj1stE3+bRLXa0Gv7dbk98Yr4RyivqJcqk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -942,13 +942,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="NovoControleDeHorarios.exe.config" size="1396">
+  <file name="NovoControleDeHorarios.exe.config" size="1399">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4bRp5jIHFW/O42Jt004QT1UWNWd+t7G+a93MAsV4v9M=</dsig:DigestValue>
+      <dsig:DigestValue>/ZNrDrF12bWTi32oF8ugwKO58ZwGo4VVOfCUzC3fyEg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="organizer_calendar_clock_pencil_10047.ico" size="4286">

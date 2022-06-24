@@ -39,10 +39,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
         }
 
         private void btn_MostrarInfo_Click(object sender, EventArgs e) {
-            //string datain, datafim;
+            tabelaFiltro.Clear();
+
             var id = cmb_UserRelatorio.Text;
-            //datain = lbData1.Text;
-            //datafim = lbData2.Text;
+            
 
             //teste tb_data
             string select = @"select  a.Cpf_Reg, a.Nome_Reg, b.diastring, a.Entrada, a.Saida, b.semanal
@@ -54,14 +54,11 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             MySqlCommand executaCmd = new MySqlCommand(select, conexao);
 
             executaCmd.Parameters.AddWithValue("@id", id);
-            //executaCmd.Parameters.AddWithValue("@datainicio", datain);
-            //executaCmd.Parameters.AddWithValue("@datafim", datafim);
             //Abre a conexão e executa o comando
             conexao.Open();
             executaCmd.ExecuteNonQuery();
 
             //criar o dataTable e MySqlDataAdapter (adaptador de dados do Mysql)
-            //DataTable tabelaFiltro = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
 
             //preenche o datatable com os dados
@@ -72,42 +69,6 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             conexao.Close();
 
             grid_Relatorio.DataSource = tabelaFiltro;
-
-            /*
-            //criar a string do comando sql
-
-            string sqlList = @"select a.Cpf_Reg, a.Nome_Reg, a.Data_Reg, a.Entrada, a.Saida, b.semanal
-                            from tb_datas as b
-                            inner join tb_horarios as a
-                            on b.dia = a.Data_Reg
-                            WHERE Nome_Reg=@id and Data_Reg between @datainicio and @datafim;" ;
-
-
-            //organização do SQL (sem parâmetros não precisa, apenas executa o comando) 
-            MySqlCommand executaCmd = new MySqlCommand(sqlList, conexao);
-
-            executaCmd.Parameters.AddWithValue("@id", id);
-            executaCmd.Parameters.AddWithValue("@datainicio", datain);
-            executaCmd.Parameters.AddWithValue("@datafim", datafim);
-            //Abre a conexão e executa o comando
-            conexao.Open();
-            executaCmd.ExecuteNonQuery();
-
-            //criar o dataTable e MySqlDataAdapter (adaptador de dados do Mysql)
-            //DataTable tabelaFiltro = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter(executaCmd);
-
-            //preenche o datatable com os dados
-
-            da.Fill(tabelaFiltro);
-
-            //fecha conexão
-            conexao.Close();
-
-            grid_Relatorio.DataSource = tabelaFiltro;
-
-            //relatorio = tabelaFiltro;
-            */
 
         }
 
@@ -175,6 +136,10 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             executaCmd.ExecuteNonQuery();
 
             conexao.Close();
+
+        }
+
+        private void grid_Relatorio_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
     }

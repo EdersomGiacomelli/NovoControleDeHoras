@@ -120,6 +120,7 @@ namespace NovoControleDeHorarios.br.com.projeto.view {
             this.grid_Relatorio.Name = "grid_Relatorio";
             this.grid_Relatorio.Size = new System.Drawing.Size(647, 312);
             this.grid_Relatorio.TabIndex = 12;
+            this.grid_Relatorio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Relatorio_CellContentClick);
             // 
             // btn_GerarRelatorio
             // 
